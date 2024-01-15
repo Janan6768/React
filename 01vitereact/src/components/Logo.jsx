@@ -1,5 +1,5 @@
 import React from 'react';
-import './Style.css';
+import '../style/Style.css';
 
 export const Logo = () => {
   return (

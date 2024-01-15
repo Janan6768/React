@@ -1,5 +1,5 @@
-import { MainContent } from "./components/MainContent"
 import { Logo } from "./components/logo"
+import { MainContent } from "./components/MainContent"
 
 function App() {
 
