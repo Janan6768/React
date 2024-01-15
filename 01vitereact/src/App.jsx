@@ -1,5 +1,4 @@
-import { LearnComponent } from "./components/LearnComponent"
-import { Navbar } from "./components/navbar"
+import { MainContent } from "./components/MainContent"
 import { Logo } from "./components/logo"
 
 function App() {
@@ -7,9 +6,7 @@ function App() {
   return (
       <>
       <Logo/>
-      <LearnComponent />
-      <Navbar/>
-
+      <MainContent/>
       </>
   )
 }
