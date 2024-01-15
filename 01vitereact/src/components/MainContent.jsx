@@ -3,7 +3,6 @@ import '../style/Style.css';
 
 export const MainContent = () => {
   return (
-    <>
     <div className='main-content'>
         <h1>Fun Facts About React</h1>
         <ul>
@@ -14,6 +13,5 @@ export const MainContent = () => {
             <li>Power thousands of Enterprise app, including mobile app</li>
         </ul>
     </div>
-    </>
   )
 }
