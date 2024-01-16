@@ -1,19 +1,42 @@
-.logo img{
-    width: 130px;
-    display: block;
-    margin: 0 auto;
-}
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-logo{
+        width: 70px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .nav-logo{
+        animation: spin 4s infinite linear;
+    }
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
 
-.main-content ul,h1{
-    text-align: center;
-    list-style-type:none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    .nav-item{
+        list-style-type: none;
+        display: flex;
+    }
+    .nav-item> li{
+        padding: 10px;
+    }
+    .nav-item>li:hover{
+        cursor: pointer;
+        color: white;
+        background-color: green;
+    }
+    .main-content ol,h1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-}
-.main-content h1{
-    color: green;
-}
-.footer{
-    text-align: center;
-    color: red;
-}
+    }
+    .main-content h1{
+        color: green;
+    }
+    .footer{
+        font-size: 18px;
+        text-align: center;
+        color: red;
+    }
