@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <header>
       <nav className='nav'>
-      <img src="image/react-logo.png" className='nav-logo' alt="React-logo"/>
+      <img src="image/react-logo.png" className='nav-logo' alt="Reactlogo"/>
         <ul className='nav-item'>
           <li>Pricing</li>
           <li>About</li>
