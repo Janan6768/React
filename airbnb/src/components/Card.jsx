@@ -1,22 +1,25 @@
 import React from 'react';
-import '../Style/style.css';
-import katie from '../images/katie-zaferes.png';
-import star from '../images/star.png'
 
-export const Card = () => {
+export const Card = (props) => {
+  let badgeText
+  if (props.item.openSpots === 0) {
+      badgeText = "SOLD OUT"
+  } else if (props.item.location === "Online") {
+      badgeText = "ONLINE"
+  }
+ 
   return (
-    <div className='card'>
-        <img src={katie} alt="katie-zaferes" className='card-imag' style={{}} />
-        <div className='card-state'>
-            <img src={star} alt="star" className='card-star'/>
-            <span>5.0</span>
-            <span className='gray'>(6) • </span>
-            <span className='gray'>USA</span>
-        </div>
-        <p>Life Lessons with Katie Zaferes</p>
-        <p><span className='bold'>From $136</span> / Person</p>
-    </div>
-    
-    
+      <div className="card">
+          {badgeText && <div className="card-badge">{badgeText}</div>}
+          <img src={`/images/${props.item.coverImg}`} className="card-image" />
+          <div className="card-stats">
+              <img src="/images/star.png" className="card-star" />
+              <span>{props.item.stats.rating}</span>
+              <span className="gray">({props.item.stats.reviewCount}) • </span>
+              <span className="gray">{props.item.location}</span>
+          </div>
+          <p className="card-title">{props.item.title}</p>
+          <p className="card-price"><span className="bold">From ${props.item.price}</span> / person</p>
+      </div>
   )
 }

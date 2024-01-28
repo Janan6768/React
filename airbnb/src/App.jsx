@@ -1,22 +1,27 @@
 import { Navbar } from "./components/Navbar"
 import { Hero } from "./components/Hero"
 import { Card } from "./components/Card"
+import data from "./components/data"
 
 
-function App() {
+export default function App() {
+  const cards = data.map(item => {
+      return (
+          <Card
+              key={item.id}
+              item={item}
+          />
+      )
+  })        
+  
   
   return (
-    <>
-    <Navbar/>
-    <Hero/>
-    <div style={{ display: 'flex', gap: '100px',marginLeft:'85px' }}>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-    </div>
-    </>
+      <div>
+          <Navbar />
+          <Hero/>
+          <section className="cards-list">
+              {cards}
+          </section>
+      </div>
   )
 }
-
-export default App
